@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Список задач</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Список задач</h1>
+    
+    <form action="add_task.html" method="get">
+        <button type="submit">Добавить задачу</button>
+    </form>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Задача</th>
+                <th>В работе</th>
+                <th>Выполненные</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Задача 1</td>
+                <td><input type="checkbox"></td>
+                <td><input type="checkbox"></td>
+                <td><button>Удалить</button></td>
+            </tr>
+            <tr>
+                <td>Задача 2</td>
+                <td><input type="checkbox"></td>
+                <td><input type="checkbox"></td>
+                <td><button>Удалить</button></td>
+            </tr>
+            <!-- Добавьте больше задач по необходимости -->
+        </tbody>
+    </table>
+</body>
+</html>
