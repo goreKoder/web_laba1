@@ -3,17 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
     <title>Добавить задачу</title>
-    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <h1>Добавить задачу</h1>
+    <input type="text" id="taskInput" placeholder="Введите текст задачи">
+    <button id="addButton">Добавить</button>
+    <a href="index.html">Назад к списку задач</a>
 
-    <form action="index.html" method="post">
-        <input type="text" name="task" placeholder="Введите текст задачи" required>
-        <button type="submit">Добавить</button>
-    </form>
-
-    <a href="index.html">Вернуться к списку задач</a>
+    <script src="script.js"></script>
 </body>
 </html>
