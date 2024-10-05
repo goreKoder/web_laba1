@@ -1,7 +1,78 @@
+*{
+    margin: 0;
+    padding: 0;
+}
 body {
     font-family: Arial, sans-serif;
 }
-
+header{
+    
+    background-color: #0C090D;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 30vh;
+}
 h1 {
-    font-size: 24px;
+    font-size: 120px;
+    color: #F9C22E;
+}
+.div_input{
+    padding: 200px;
+}
+.add_task_body{
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    flex-direction: column;
+    height: 100vh;
+}
+main{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+    /* justify-content: center; */
+    background-color:#F9C22E;
+}
+.tr1{
+    background-color:#F15946;
+    height: 50px;
+
+}
+.tr2{
+    background-color:#0C090D;
+    color:#ffffff;
+    height: 50px;
+}
+a{
+    text-decoration: none;
+    color:#000000;
+    font-size: 48px;
+}
+th{
+    padding: 50px;
+}
+td {
+    text-align: center;
+    vertical-align: middle;
+    height: 50px;
+    width: 100px;
+}
+button{
+    background-color:#ffffff;
+    color: rgb(0, 0, 0);
+    border: none;
+    cursor: pointer; /* Устанавливаем курсор по умолчанию для кнопки */
+    height: 40px;
+    width: 96px;
+    font-size: 14px;
+    border-radius: 8px;
+    transition: 2s;
+}
+button:hover {
+    /* color: pink; */
+    background: #000000;
+    color: #fff;
+    /* text-decoration: underline; */
 }

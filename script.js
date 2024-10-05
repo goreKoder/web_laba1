@@ -1,5 +1,4 @@
-// Проверяем, есть ли сохраненные задачи в локальном хранилище
-// var a = 0
+let a = 0
 // Проверяем, есть ли сохраненные задачи в локальном хранилище
 function loadTasks() {
     const tasks = JSON.parse(localStorage.getItem('tasks')) || [];
@@ -10,6 +9,7 @@ function loadTasks() {
 
     tasks.forEach((task, index) => {
         const tr = document.createElement('tr');
+        
         const td1 = document.createElement('td');
         const td2 = document.createElement('td');
         const td3 = document.createElement('td');
@@ -25,6 +25,12 @@ function loadTasks() {
         deleteButton.addEventListener('click', () => {
             deleteTask(index);
         });
+        if(a%2==0){
+            tr.className = 'tr1'
+        }
+        else{
+            tr.className = 'tr2'
+        }
         td2.appendChild(checkbox2)
         td3.appendChild(checkbox3)
         td4.appendChild(deleteButton);//добавил кнопку в элемент таблици
@@ -33,6 +39,7 @@ function loadTasks() {
         tr.appendChild(td3);
         tr.appendChild(td4);//добавил сами элементы таблици
         taskList.appendChild(tr);
+        a++
     });
 }
 
@@ -54,12 +61,16 @@ document.getElementById('addButton')?.addEventListener('click', function() {
         localStorage.setItem('tasks', JSON.stringify(tasks));
         alert('Задача добавлена!');
         window.location.href = 'index.html'; // Перенаправляем на главную страницу
-    } else {
+    } 
+    else {
         alert('Введите текст задачи!');
     }
 });
 
 // Загружаем задачи на главной странице
 if (document.getElementById('taskList')) {
+    loadTasks();
+}
+else{
     loadTasks();
 }

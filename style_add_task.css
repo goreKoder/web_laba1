@@ -1,0 +1,48 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body {
+    font-family: Arial, sans-serif;
+    background-color:#F9C22E;
+}
+h1 {
+    font-size: 120px;
+    color: #000000;
+}
+#addButton{
+    background-color:#E01A4F;
+    color: white;
+    border: none;
+    cursor: pointer; /* Устанавливаем курсор по умолчанию для кнопки */
+    height: 40px;
+    width: 96px;
+    font-size: 14px;
+    border-radius: 8px;
+}
+.div_input{
+    padding: 200px;
+}
+.add_task_body{
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    flex-direction: column;
+    height: 100vh;
+}
+a{
+    text-decoration: none;
+    color:#000000;
+    font-size: 48px;
+}
+input{
+    height: 40px;
+    width: 300px;
+    border: none;
+}
+.highlight {
+    position: relative;
+    display: inline-block;
+    color: black; /* Цвет текста */
+}
+
