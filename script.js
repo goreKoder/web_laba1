@@ -59,12 +59,12 @@ document.getElementById('addButton')?.addEventListener('click', function() {
         const tasks = JSON.parse(localStorage.getItem('tasks')) || [];
         tasks.push(taskInput);
         localStorage.setItem('tasks', JSON.stringify(tasks));
-        alert('Задача добавлена!');
+        // alert('Задача добавлена!');
         window.location.href = 'index.html'; // Перенаправляем на главную страницу
     } 
-    else {
-        alert('Введите текст задачи!');
-    }
+    // else {
+    //     alert('Введите текст задачи!');
+    // }
 });
 
 // Загружаем задачи на главной странице
