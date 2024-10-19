@@ -6,7 +6,34 @@ body {
     font-family: Arial, sans-serif;
     background-color:#F9C22E;
 }
-h1 {
+header{
+    background-color: #0C090D;
+    /* width: 100%; */
+    height: 30vh;
+}
+nav{
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    justify-content: space-between;
+    padding-left: 400px;
+    padding-right: 400px;
+    height: 10%;
+}
+.nav_a{
+    font-size: 14px;
+    color:#ffffff;
+    white-space: nowrap;
+}
+.h1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 60px;
+    color: #F9C22E;
+    height: 90%;
+}
+h2 {
     font-size: 120px;
     color: #000000;
 }
@@ -23,7 +50,7 @@ h1 {
 .div_input{
     padding: 200px;
 }
-.add_task_body{
+main{
     display: flex;
     justify-content: center;
     align-items:center;
@@ -46,3 +73,27 @@ input{
     color: black; /* Цвет текста */
 }
 
+@media (max-width: 1600px) {
+    header{
+        height: 27vh;
+    }
+    .h1 {
+        font-size: 100px;
+    }
+}
+@media (max-width: 1400px) {
+    header{
+        height: 22vh;
+    }
+    .h1 {
+        font-size: 80px;
+    }
+}
+@media (max-width: 1100px) {
+    header{
+        height: 18vh;
+    }
+    .h1 {
+        font-size: 60px;
+    }
+}
