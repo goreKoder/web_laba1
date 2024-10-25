@@ -6,9 +6,7 @@ body {
     font-family: Arial, sans-serif;
 }
 header{
-    
     background-color: #0C090D;
-    
     height: 30vh;
 }
 nav{
@@ -16,11 +14,12 @@ nav{
     justify-content: center;
     align-items:center;
     justify-content: space-between;
-    padding-left: 300px;
-    padding-right: 300px;
+    padding-left: 20%;
+    padding-right: 20%;
     height: 30px;
 }
 .logo{
+    white-space: nowrap;
     margin-right: 200px;
     font-size: 20px;
     color:#F9C22E;
@@ -32,6 +31,46 @@ nav{
     font-size: 14px;
     color:#ffffff;
 }
+/* Бургер меню */
+.burger{
+    display: none;
+    position: relative;
+    z-index: 50;
+    /* justify-content: center; */
+    align-items:center;
+    width: 30px;
+    height: 20px;
+}
+.burger::before, .burger::after, .burger span{
+    position: absolute;
+    content: '';
+    height: 2px;
+    width: 80%;
+    background-color:#ffffff;
+    transition: all 0.3s ease 0s;
+} 
+.burger::before{ top: 0px }
+.burger::after{ bottom: 0px }
+
+#burger_toggle:checked ~ .burger::before{
+    top: 50%;
+    transform: translate(0, -50%) rotate(-45deg);;
+    /* transform: rotate(-45deg); */
+}
+#burger_toggle:checked ~ .burger::after{
+    bottom: 50%;
+    transform: translate(0, 50%) rotate(45deg);
+    /* transform: rotate(45deg); */
+}
+#burger_toggle:checked ~ .burger span{
+    transform:  scale(0);
+}
+#burger_toggle{
+    display: none;
+}
+
+
+
 .i_here{
     white-space: nowrap;
     margin-left: 10px;
@@ -70,7 +109,8 @@ main{
     align-items:center;
 }
 .img_main{
-    height: 900px;
+    height: 40vw;
+    min-block-size: 350px;
 }
 .text{
     width: 400px;
@@ -153,3 +193,23 @@ button:hover {
         font-size: 60px;
     }
 }
+@media (max-width: 992px) {
+    .burger{
+        display: flex;
+    }
+    .nav_a {
+        display: none;
+    }
+    .i_here{
+        display: none;
+    }
+    nav{
+        padding-left: 10%;
+        padding-right: 10%;
+    }
+    .logo{
+        margin-right: 100px;
+    }
+}
+@media (max-width: 576px) {}
+@media (max-width: 376px) {}
