@@ -9,14 +9,20 @@ header{
     background-color: #0C090D;
     height: 30vh;
 }
+ul{
+    list-style-type: none;
+}
 nav{
     display: flex;
     justify-content: center;
     align-items:center;
+    height: 30px;
+}
+.nav_div{
+    display: flex;
     justify-content: space-between;
     padding-left: 20%;
     padding-right: 20%;
-    height: 30px;
 }
 .logo{
     white-space: nowrap;
@@ -24,22 +30,41 @@ nav{
     font-size: 20px;
     color:#F9C22E;
 }
-.nav_a{
+.nav_a, .burger_nav_a{
     white-space: nowrap;
     margin-left: 10px;
     margin-right: 10px;
     font-size: 14px;
     color:#ffffff;
 }
+.i_here, .burger_i_here{
+    white-space: nowrap;
+    margin-left: 10px;
+    margin-right: 10px;
+    font-size: 14px;
+    color:#F9C22E;
+}
+
+
 /* Бургер меню */
 .burger{
     display: none;
     position: relative;
+    right: 0;
     z-index: 50;
-    /* justify-content: center; */
     align-items:center;
     width: 30px;
     height: 20px;
+}
+.burger_memu{
+    width: 40px;
+    display: none;
+    right: 0;
+    margin-right: 20%;
+    position: absolute;
+    margin-top: 2vh;
+    color:#ffffff;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 .burger::before, .burger::after, .burger span{
     position: absolute;
@@ -65,19 +90,16 @@ nav{
 #burger_toggle:checked ~ .burger span{
     transform:  scale(0);
 }
-#burger_toggle{
+#burger_toggle:checked ~ .burger_memu{
+    display: block;
+}
+#burger_toggle{ /* невидимый чекбокс */
     display: none;
 }
 
 
 
-.i_here{
-    white-space: nowrap;
-    margin-left: 10px;
-    margin-right: 10px;
-    font-size: 14px;
-    color:#F9C22E;
-}
+
 .h1 {
     display: flex;
     justify-content: center;
@@ -208,8 +230,24 @@ button:hover {
         padding-right: 10%;
     }
     .logo{
-        margin-right: 100px;
+        margin-right: 0px;
     }
 }
-@media (max-width: 576px) {}
-@media (max-width: 376px) {}
+@media (max-width: 576px) {
+    header{
+        height: 13vh;
+    }
+    .h1{
+        display: block;
+        font-size: 40px;
+    }
+}
+@media (max-width: 376px) {
+    header{
+        height: 10vh;
+    }
+    .h1{
+        display: block;
+        font-size: 28px;
+    }
+}
