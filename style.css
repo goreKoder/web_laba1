@@ -101,6 +101,7 @@ nav{
 
 
 .h1 {
+    white-space: nowrap;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -130,9 +131,15 @@ main{
     justify-content: center;
     align-items:center;
 }
+.div_img_main{
+    display: flex;
+    justify-content: center;
+}
 .img_main{
-    height: 40vw;
+    width: 40vw;
+    height: auto;
     min-block-size: 350px;
+    min-width: 350px;
 }
 .text{
     width: 400px;
@@ -186,7 +193,9 @@ button:hover {
     /* text-decoration: underline; */
 }
 .body_error{
+    width: 100vw;
     height: 100vh;
+    /* height: auto; */
     background-image: url(img/f3b574109526c3e18c1c04d4050d14ff.png);
     background-size: cover;
     background-repeat: no-repeat;
@@ -232,6 +241,17 @@ button:hover {
     .logo{
         margin-right: 0px;
     }
+    .h1{
+        font-size: 40px;
+    }
+
+    .contaner{
+        display: block;
+    }
+    .text{
+        width: 400px;
+        padding: 20px;
+    }
 }
 @media (max-width: 576px) {
     header{
@@ -239,15 +259,39 @@ button:hover {
     }
     .h1{
         display: block;
-        font-size: 40px;
+        font-size: 25px;
+    }
+    h3, h2, .add_task{
+        font-size: 25px;
+    }
+    .text{
+        font-size: 15px;
+        width: 90%;
+        padding: 20px;
     }
 }
 @media (max-width: 376px) {
     header{
         height: 10vh;
     }
-    .h1{
+    .logo{
+        font-size: 15px;
+    }
+    .nav_div{
+        padding-left: 0%;
+        padding-right: 0%;
+    }
+    .h1, h2, .add_task{
         display: block;
-        font-size: 28px;
+        font-size: 20px;
+    }
+    .img_main{
+        width: 90vw;
+        height: auto;
+        min-block-size: 150px;
+        min-width: 150px;
+    }
+    .burger_nav_a, .burger_i_here{
+    font-size: 10px;
     }
 }

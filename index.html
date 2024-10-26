@@ -10,19 +10,35 @@
 </head>
 <body>
     <header>
-        <div>
+        <div class="nav_div">
+            <p class="logo">TO-DO LIST</p>
+            
             <nav class="nav">
+                
                 <a href="html/index_main.html" class="nav_a">Главная</a>
                 <a href="html/index_projects.html" class="nav_a">Проекты</a>
-                <a href="index.html" class="nav_a">Список задач</a>
+                <p class="i_here">Список задач</p>
                 <a href="html/index_description.html" class="nav_a">О приложении</a>
             </nav>
+            <div>
+                <input id="burger_toggle" type="checkbox">
+                <label for="burger_toggle" class="burger">
+                    <span></span>
+                </label>
+                <div class="burger_memu">
+                    <ul>
+                        <li><a href="html/index_main.html" class="burger_nav_a">Главная</a></li>
+                        <li><a href="html/index_projects.html" class="burger_nav_a">Проекты</a></li>
+                        <li><p class="burger_i_here">Список задач</p></li>
+                        <li><a href="html/index_description.html" class="burger_nav_a">О приложении</a></li>
+                    </ul>
+                </div>
+            </div>
         </div>
-        
         <div class="h1">
-            <h1>Список задач</h1>
+            <h1>Главная</h1>
+            
         </div>
-        
     </header>
 
     <main>
@@ -46,7 +62,7 @@
         </table>
         
         <!-- <ul id="taskList"></ul> -->
-        <a href="html/add_task.html">Добавить задачу</a>
+        <a href="html/add_task.html" class="add_task">Добавить задачу</a>
     
         <!-- <script src="script.js"></script> -->
     </main>
