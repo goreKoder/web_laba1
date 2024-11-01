@@ -36,7 +36,7 @@
             </div>
         </div>
         <div class="h1">
-            <h1>Главная</h1>
+            <h1>Список задач</h1>
             
         </div>
     </header>
@@ -52,7 +52,7 @@
                 </tr>
             </thead>
             <tbody id="taskList">
-                <tr>
+                <tr class="tr1">
                     <td>Задача 1</td>
                     <td><input type="checkbox"></td>
                     <td><input type="checkbox"></td>
@@ -61,9 +61,31 @@
             </tbody>
         </table>
         
-        <!-- <ul id="taskList"></ul> -->
-        <a href="html/add_task.html" class="add_task">Добавить задачу</a>
-    
+        <!-- <a href="html/add_task.html" class="add_task">Добавить задачу</a> -->
+        <a href="#" id="openDialog">Добавить задачу</a>
+        <dialog id="myDialog">
+            <form method="dialog">
+                <input type="text">
+                <menu>
+                    <button value="default">Подтвердить</button>
+                    <button value="cancel">Отмена</button>
+                </menu>
+            </form>
+        </dialog>
+        
+
+<script>
+    const dialog = document.getElementById('myDialog');
+    const openDialogButton = document.getElementById('openDialog');
+
+    openDialogButton.addEventListener('click', () => {
+        dialog.showModal(); // Открыть модальный диалог
+    });
+
+    dialog.addEventListener('close', () => {
+        console.log('Диалог закрыт с результатом:', dialog.returnValue);
+    });
+</script>
         <!-- <script src="script.js"></script> -->
     </main>
     

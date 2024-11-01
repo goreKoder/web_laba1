@@ -65,6 +65,9 @@ nav{
     margin-top: 2vh;
     color:#ffffff;
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    transform: translateY(-20px);
+    opacity: 0;
+    transition: 0.3s;
 }
 .burger::before, .burger::after, .burger span{
     position: absolute;
@@ -92,13 +95,19 @@ nav{
 }
 #burger_toggle:checked ~ .burger_memu{
     display: block;
+    transform: translateY(0);
+    opacity: 1;
 }
 #burger_toggle{ /* невидимый чекбокс */
     display: none;
 }
 
 
-
+#myDialog{
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%)
+}
 
 .h1 {
     white-space: nowrap;
@@ -184,7 +193,7 @@ button{
     width: 96px;
     font-size: 14px;
     border-radius: 8px;
-    transition: 2s;
+    transition: 0.2s;
 }
 button:hover {
     /* color: pink; */
