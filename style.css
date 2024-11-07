@@ -157,12 +157,28 @@ main{
 h3{
     font-size: 60px;
 }
-.tr1{
+/* таблица */
+tbody, thead{
+    display: flex;
+    
+    width: 100%;
+}
+thead{
+}
+.trH{
+    margin: 10px;
+    /* width: 100%; */
+}
+tr{
+    width: 100%;
+}
+.td1{
+    display: flex;
     background-color:#F15946;
     height: 50px;
-
 }
-.tr2{
+.td2{
+    display: flex;
     background-color:#0C090D;
     color:#ffffff;
     height: 50px;
@@ -176,13 +192,24 @@ table{
     margin: 30px;
 }
 th{
-    padding: 50px;
-}
-td {
+    /* padding: 50px; */
     text-align: center;
     vertical-align: middle;
+    height: 20px;
+    width: 200px;
+}
+td {
+    /* text-align: center; */
+    align-items:center;
+    justify-content: space-between;
+    justify-content: center;
+    vertical-align: middle;
     height: 50px;
-    width: 100px;
+    width: 200px;
+    margin: 10px;
+}
+td p{
+    margin-right: 10px;
 }
 button{
     background-color:#ffffff;
@@ -209,6 +236,7 @@ button:hover {
     background-size: cover;
     background-repeat: no-repeat;
 }
+
 @media (max-width: 1600px) {
     header{
         height: 27vh;
@@ -278,6 +306,17 @@ button:hover {
         width: 90%;
         padding: 20px;
     }
+    td{
+        width: 150px;
+        font-size: 12px;
+    }
+    button{
+        width: 70px;
+        height: 30px;
+    }
+    #openDialog{
+        font-size: 40px;
+    }
 }
 @media (max-width: 376px) {
     header{
@@ -302,5 +341,25 @@ button:hover {
     }
     .burger_nav_a, .burger_i_here{
     font-size: 10px;
+    }
+    td p{
+        margin-right: 2px;
+    }
+    td{
+        font-size: 10px;
+        height: 10px;
+        width: 100px;
+        margin: 5px;
+    }
+    th{
+        font-size: 10px;
+    }
+    button{
+        width: 50px;
+        height: 20px;
+        font-size: 12px;
+    }
+    #openDialog{
+        font-size: 30px;
     }
 }
