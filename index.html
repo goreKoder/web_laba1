@@ -8,7 +8,7 @@
 
     <title>Список задач</title>
 </head>
-<body>
+<body id="body">
     <header>
         <div class="nav_div">
             <p class="logo">TO-DO LIST</p>
@@ -65,6 +65,7 @@
         
         <!-- <a href="html/add_task.html" class="add_task">Добавить задачу</a> -->
         <a href="#" id="openDialog">Добавить задачу</a>
+        <div class="overlay" id="overlay"></div>
         <dialog id="myDialog">
             <form method="dialog">
                 <input type="text">
@@ -79,13 +80,21 @@
 <script>
     const dialog = document.getElementById('myDialog');
     const openDialogButton = document.getElementById('openDialog');
-
+    const overlay = document.getElementById('overlay');
     openDialogButton.addEventListener('click', () => {
-        dialog.showModal(); // Открыть модальный диалог
+        dialog.show(); // Открыть модальный диалог
+        overlay.style.display = 'block'; // Показываем оверлей
     });
 
     dialog.addEventListener('close', () => {
         console.log('Диалог закрыт с результатом:', dialog.returnValue);
+        
+        overlay.style.display = 'none';
+    });
+    // Закрытие модального окна при клике вне него
+    overlay.addEventListener('click', () => {
+        dialog.close();// Скрываем диалог
+        overlay.style.display = 'none';
     });
 </script>
         <!-- <script src="script.js"></script> -->
