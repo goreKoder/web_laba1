@@ -21,6 +21,7 @@ nav{
 .nav_div{
     display: flex;
     justify-content: space-between;
+    padding-top: 8px;
     padding-left: 20%;
     padding-right: 20%;
 }
@@ -57,7 +58,8 @@ nav{
     height: 20px;
 }
 .burger_memu{
-    width: 40px;
+    background-color:#000000;
+    /* width: 110px; */
     display: none;
     right: 0;
     margin-right: 20%;
@@ -325,6 +327,10 @@ button:hover {
     #openDialog{
         font-size: 40px;
     }
+    .text{
+        box-sizing: border-box;
+        width: 100 vw;
+    }
 }
 @media (max-width: 376px) {
     header{
@@ -334,8 +340,8 @@ button:hover {
         font-size: 15px;
     }
     .nav_div{
-        padding-left: 0%;
-        padding-right: 0%;
+        padding-left: 15%;
+        padding-right: 15%;
     }
     .h1, h2, .add_task{
         display: block;
