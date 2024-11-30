@@ -227,12 +227,18 @@ button:hover {
     /* text-decoration: underline; */
 }
 .body_error{
+    display: flex;
     width: 100vw;
     height: 100vh;
-    /* height: auto; */
-    background-image: url(img/f3b574109526c3e18c1c04d4050d14ff.png);
-    background-size: cover;
-    background-repeat: no-repeat;
+    justify-content: center;
+    align-items:center
+    /* background-image: url(img/f3b574109526c3e18c1c04d4050d14ff.png); */
+    /* background-size: cover;
+    background-repeat: no-repeat; */
+}
+.error{
+    text-align: center;
+    font-size: 200px;
 }
 .overlay {
     position: fixed;
